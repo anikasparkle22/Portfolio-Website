@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Anika – Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- ===================================================== -->
+<!-- HERO SECTION                                           -->
+<!-- ===================================================== -->
+<section class="hero bg-space">
+  <div class="hero-inner">
+
+    <div class="intro">
+      <h1 class="intro-title">Hi, I’m Anika</h1>
+      <p class="intro-subtitle" id="rotating-text">software developer</p>
+    </div>
+
+    <!-- RIGHT SIDE CONSTELLATIONS (STATIC, VISIBLE) -->
+    <div class="constellations">
+      <svg class="constellation-svg" viewBox="0 0 2400 1400">
+
+        <defs>
+          <circle id="star" r="20" fill="white" opacity="0.9"></circle>
+        </defs>
+
+        <!-- ============================= -->
+        <!-- TOP CONSTELLATION             -->
+        <!-- ============================= -->
+
+        <!-- Html→CSS, Html→PHP, PHP→JS, CSS→JS, JS→React -->
+        <line x1="300"  y1="350" x2="800"  y2="180" class="star-line" />
+        <line x1="300"  y1="350" x2="600"  y2="750" class="star-line" />
+        <line x1="800"  y1="180" x2="1300" y2="550" class="star-line" />
+        <line x1="600"  y1="750" x2="1300" y2="550" class="star-line" />
+        <line x1="1300" y1="550" x2="1900" y2="480" class="star-line" />
+
+        <!-- Stars -->
+        <use href="#star" x="300"  y="350" class="twinkle delay1" />
+        <use href="#star" x="800"  y="180" class="twinkle delay3" />
+        <use href="#star" x="1300" y="550" class="twinkle delay2" />
+        <use href="#star" x="1900" y="480" class="twinkle delay5" />
+        <use href="#star" x="600"  y="750" class="twinkle delay4" />
+
+        <!-- Labels -->
+        <text x="250"  y="330" class="label">Html</text>
+        <text x="770"  y="160" class="label">CSS</text>
+        <text x="1250" y="530" class="label">JavaScript</text>
+        <text x="1920" y="470" class="label">React</text>
+        <text x="560"  y="800" class="label">PHP</text>
+
+        <!-- ============================== -->
+        <!-- BOTTOM CONSTELLATION           -->
+        <!-- ============================== -->
+
+        <!-- Figma→Python→SQL→Java, SQL→R, Figma→Java -->
+        <line x1="450"  y1="1000" x2="900"  y2="750"  class="star-line" />
+        <line x1="900"  y1="750"  x2="1350" y2="850" class="star-line" />
+        <line x1="1350" y1="850"  x2="1100" y2="1200" class="star-line" />
+        <line x1="1350" y1="850"  x2="2000" y2="700" class="star-line" />
+        <line x1="450"  y1="1000" x2="1100" y2="1200" class="star-line" />
+
+        <!-- Stars -->
+        <use href="#star" x="450"  y="1000" class="twinkle delay2" />
+        <use href="#star" x="900"  y="750"  class="twinkle delay1" />
+        <use href="#star" x="1350" y="850"  class="twinkle delay4" />
+        <use href="#star" x="1100" y="1200" class="twinkle delay3" />
+        <use href="#star" x="2000" y="700"  class="twinkle delay5" />
+
+        <!-- Labels -->
+        <text x="420"  y="1045" class="label">Figma</text>
+        <text x="870"  y="735"  class="label">Python</text>
+        <text x="1320" y="835"  class="label">SQL</text>
+        <text x="1080" y="1245" class="label">Java</text>
+        <text x="2020" y="690"  class="label">R</text>
+
+      </svg>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- ABOUT ME SECTION                                       -->
+<!-- ===================================================== -->
+<section class="about-section bg-space">
+  <div class="about-inner">
+
+    <img src="anika.png" alt="Anika" class="about-img">
+
+    <div>
+      <h2>About Me</h2>
+      <p class="about-text">
+        I’m a creator who moves fluidly between art, technology, and storytelling.
+        As a software developer, UX/UI designer, and data scientist, I love building
+        intuitive digital experiences that make complex ideas feel simple and human.
+        But my creativity doesn’t stop at code—I'm also an artist, music producer,
+        and violinist, always experimenting with new ways to express emotion visually
+        and sonically.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- PROJECTS SECTION                                       -->
+<!-- ===================================================== -->
+<section class="projects-section bg-space">
+  <div class="projects-inner">
+
+    <h2 class="projects-title">Projects</h2>
+
+    <ul class="project-filters">
+      <li class="filter-pill active">All</li>
+      <li class="filter-pill">UX</li>
+      <li class="filter-pill">CS</li>
+      <li class="filter-pill">Data</li>
+      <li class="filter-pill">Art</li>
+      <li class="filter-pill">Music</li>
+    </ul>
+
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-thumb">Serene</div>
+        <p class="project-name">Mental Health App</p>
+      </div>
+
+      <div class="project-card">
+        <div class="project-thumb">ALANA</div>
+        <p class="project-name">ALANA e-board website</p>
+      </div>
+
+        <div class="project-card">
+        <div class="project-thumb">Froggit</div>
+        <p class="project-name">Froggit Game</p>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- SKILLS SECTION                                        -->
+<!-- ===================================================== -->
+<section class="skills-section bg-space">
+  <div class="skills-inner">
+
+    <h2 class="skills-title">Skills</h2>
+
+    <div class="skills-grid">
+
+      <!-- Row 1 -->
+      <div class="skill">
+        <img src="Java.png" alt="Java">
+      </div>
+
+      <div class="skill">
+        <img src="Python.png" alt="Python">
+      </div>
+
+      <div class="skill">
+        <img src="SQL.png" alt="SQL">
+      </div>
+
+      <div class="skill">
+        <img src="R.png" alt="R">
+      </div>
+
+      <!-- Row 2 -->
+      <div class="skill">
+        <img src="HTML.png" alt="HTML">
+      </div>
+
+      <div class="skill">
+        <img src="JS.png" alt="JavaScript">
+      </div>
+
+      <div class="skill">
+        <img src="CSS.png" alt="CSS">
+      </div>
+
+      <div class="skill">
+        <img src="React.png" alt="React">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===================================================== -->
+<!-- RESUME SECTION                                         -->
+<!-- ===================================================== -->
+<section class="resume-section bg-space">
+  <div class="resume-inner">
+    <h2 class="resume-title">Resume</h2>
+
+    <!-- CARD 1 -->
+    <div class="resume-card">
+      <h3>Operational Strategist & Data Analyst - Extern, Amazon</h3>
+      <p class="date">September 2025 – November 2025</p>
+      <ul>
+        <li>Analyzed unstructured employee feedback to identify workforce attrition risks, productivity blockers, and key operational pain points within Amazon Fulfillment Centers.</li>
+        <li>Created segmented cohort profiles using qualitative data analysis and thematic coding to surface role-specific challenges and recommend targeted interventions.</li>
+        <li>Developed business-ready briefing notes and strategy decks synthesizing frontline insights into actionable operational recommendations.</li>
+      </ul>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="resume-card">
+      <h3>Automation Engineer – PricewaterhouseCoopers (PwC)</h3>
+      <p class="date">June 2024 – Aug 2024</p>
+      <ul>
+        <li>Designed and deployed intelligent automation pipelines using RPA, AI, and ML tools to streamline critical business workflows and eliminate redundancy.</li>
+        <li>Engineered scalable automation frameworks and scripting solutions that reduced manual processing by 60%, improving operational efficiency across teams.</li>
+        <li>Partnered with PwC’s MyAI team to identify, scope, and deliver custom automation systems tailored to client-specific process requirements.</li>
+        <li>Led rigorous testing and QA cycles, ensuring compliance with enterprise standards while delivering reliable, high-performance automation solutions.</li>
+      </ul>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="resume-card">
+      <h3>Database Manager – Durland Alternatives Library</h3>
+      <p class="date">September 2023 – May 2024</p>
+      <ul>
+        <li>Administered and maintained the Prisoner’s Express database, ensuring 100% accuracy in intake form data and mailing records for over 1,000 incarcerated individuals.</li>
+        <li>Curated and evaluated hundreds of prisoner-submitted artworks, providing detailed feedback to artists and cultivating a meaningful platform for creative expression and rehabilitation.</li>
+        <li>Automated intake workflows and digitized data entry processes using MySQL and Python scripts.</li>
+      </ul>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="resume-card">
+      <h3>Accessibility Tester – American Foundation for the Blind</h3>
+      <p class="date">June 2022 – May 2023</p>
+      <ul>
+        <li>Executed comprehensive accessibility audits of major websites (e.g., WebMD, Reebok) using screen readers like NVDA and WCAG 2.1 standards.</li>
+        <li>Delivered detailed reports on user experience gaps and compliance issues, enabling actionable improvements in digital accessibility for visually impaired users.</li>
+        <li>Completed foundational training in digital inclusion, WCAG, and accessible web development, including JavaScript, HTML, and data science tools.</li>
+        <li>Collaborated with blind and low-vision end users to ensure inclusive feedback loops and co-created accessibility testing procedures.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+<section class="contact-section bg-space" id="contact">
+  <div class="contact-inner">
+
+    <h2 class="contact-title">Get in Touch</h2>
+
+    <form class="contact-form" action="contact.php" method="POST">
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit" class="submit-btn">Submit</button>
+
+    </form>
+
+  </div>
+</section>
+
+
+</body>
+
+
+z
+</html>
+
