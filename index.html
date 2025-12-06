@@ -22,34 +22,45 @@
       <p class="intro-subtitle" id="rotating-text">Software Developer</p>
     </div>
 
-    <!-- RIGHT SIDE CONSTELLATIONS (STATIC, VISIBLE) -->
+  <!-- RIGHT SIDE CONSTELLATIONS -->
     <div class="constellations">
       <svg class="constellation-svg"
            viewBox="0 0 2600 1800"
            style="transform: scale(1.25); transform-origin: center;">
 
         <defs>
-          <!-- Updated star size -->
           <circle id="star" r="23" fill="white" opacity="0.9"></circle>
-        </defs>
+        </defs><filter id="glow-small" x="-80%" y="-80%" width="260%" height="260%">
+  <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="white" flood-opacity="0.55" />
+</filter>
+
+<filter id="glow-big" x="-150%" y="-150%" width="400%" height="400%">
+  <feDropShadow dx="0" dy="0" stdDeviation="45" flood-color="white" flood-opacity="1" />
+</filter><filter id="glow-small" x="-80%" y="-80%" width="260%" height="260%">
+  <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="white" flood-opacity="0.55" />
+</filter>
+
+<filter id="glow-big" x="-150%" y="-150%" width="400%" height="400%">
+  <feDropShadow dx="0" dy="0" stdDeviation="45" flood-color="white" flood-opacity="1" />
+</filter>
 
         <!-- ============================= -->
-        <!-- TOP CONSTELLATION             -->
+        <!-- TOP CONSTELLATION -->
         <!-- ============================= -->
 
-        <!-- Html→CSS, Html→PHP, PHP→JS, CSS→JS, JS→React -->
+        <!-- Lines -->
         <line x1="300"  y1="350" x2="800"  y2="180" class="star-line" />
-        <line x1="300"  y1="350" x2="600"  y2="750" class="star-line" />
+   
         <line x1="800"  y1="180" x2="1300" y2="550" class="star-line" />
         <line x1="600"  y1="750" x2="1300" y2="550" class="star-line" />
         <line x1="1300" y1="550" x2="1900" y2="480" class="star-line" />
 
-        <!-- Stars -->
-        <use href="#star" x="300"  y="350" class="twinkle delay1" />
-        <use href="#star" x="800"  y="180" class="twinkle delay3" />
-        <use href="#star" x="1300" y="550" class="twinkle delay2" />
-        <use href="#star" x="1900" y="480" class="twinkle delay5" />
-        <use href="#star" x="600"  y="750" class="twinkle delay4" />
+        <!-- Stars (twinkle + glow mixed) -->
+        <use href="#star" x="300"  y="350" class="twinkle speed3 delayA" />
+        <use href="#star" x="800"  y="180" class="twinkle speed1 delayD" />
+        <use href="#star" x="1300" y="550" class="twinkle speed5 delayC" />
+        <use href="#star" x="1900" y="480" class="twinkle speed4 delayE" />
+        <use href="#star" x="600"  y="750" class="twinkle speed2 delayB" />
 
         <!-- Labels -->
         <text x="250"  y="330" class="label">Html</text>
@@ -58,9 +69,9 @@
         <text x="1920" y="470" class="label">React</text>
         <text x="560"  y="800" class="label">PHP</text>
 
-        <!-- ============================== -->
-        <!-- BOTTOM CONSTELLATION (shifted down +200px) -->
-        <!-- ============================== -->
+        <!-- ============================= -->
+        <!-- BOTTOM CONSTELLATION -->
+        <!-- ============================= -->
 
         <line x1="450"  y1="1200" x2="900"  y2="950"  class="star-line" />
         <line x1="900"  y1="950"  x2="1350" y2="1050" class="star-line" />
@@ -68,12 +79,12 @@
         <line x1="1350" y1="1050" x2="2000" y2="900"  class="star-line" />
         <line x1="450"  y1="1200" x2="1100" y2="1400" class="star-line" />
 
-        <!-- Stars -->
-        <use href="#star" x="450"  y="1200" class="twinkle delay2" />
-        <use href="#star" x="900"  y="950"  class="twinkle delay1" />
-        <use href="#star" x="1350" y="1050" class="twinkle delay4" />
-        <use href="#star" x="1100" y="1400" class="twinkle delay3" />
-        <use href="#star" x="2000" y="900"  class="twinkle delay5" />
+        <!-- Updated glowing twinkling stars -->
+        <use href="#star" x="450"  y="1200" class="twinkle speed4 delayC" />
+        <use href="#star" x="900"  y="950"  class="twinkle speed2 delayA" />
+        <use href="#star" x="1350" y="1050" class="twinkle speed5 delayE" />
+        <use href="#star" x="1100" y="1400" class="twinkle speed3 delayD" />
+        <use href="#star" x="2000" y="900"  class="twinkle speed1 delayB" />
 
         <!-- Labels -->
         <text x="420"  y="1245" class="label">Figma</text>
@@ -87,7 +98,6 @@
 
   </div>
 </section>
-
 <!-- ===================================================== -->
 <!-- ABOUT ME SECTION                                       -->
 <!-- ===================================================== -->
