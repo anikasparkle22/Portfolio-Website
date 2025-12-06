@@ -19,3 +19,10 @@
   }
 
   setInterval(rotateText, 3000);
+
+  function scrollProjects() {
+  document.getElementById("projectsScroll").scrollBy({
+    left: 420,
+    behavior: "smooth"
+  });
+}
