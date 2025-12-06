@@ -1,8 +1,8 @@
 
   const phrases = [
-    "software developer",
-    "frontend engineer",
-    "data scientist",
+    "Software Developer",
+    "Frontend Engineer",
+    "Data Scientist",
     "UX Designer"
   ];
 

@@ -11,7 +11,7 @@
 
 <body>
 
-<!-- ===================================================== -->
+ <!-- ===================================================== -->
 <!-- HERO SECTION                                           -->
 <!-- ===================================================== -->
 <section class="hero bg-space">
@@ -19,15 +19,18 @@
 
     <div class="intro">
       <h1 class="intro-title">Hi, I’m Anika</h1>
-      <p class="intro-subtitle" id="rotating-text">software developer</p>
+      <p class="intro-subtitle" id="rotating-text">Software Developer</p>
     </div>
 
     <!-- RIGHT SIDE CONSTELLATIONS (STATIC, VISIBLE) -->
     <div class="constellations">
-      <svg class="constellation-svg" viewBox="0 0 2400 1400">
+      <svg class="constellation-svg"
+           viewBox="0 0 2600 1800"
+           style="transform: scale(1.25); transform-origin: center;">
 
         <defs>
-          <circle id="star" r="20" fill="white" opacity="0.9"></circle>
+          <!-- Updated star size -->
+          <circle id="star" r="23" fill="white" opacity="0.9"></circle>
         </defs>
 
         <!-- ============================= -->
@@ -56,29 +59,28 @@
         <text x="560"  y="800" class="label">PHP</text>
 
         <!-- ============================== -->
-        <!-- BOTTOM CONSTELLATION           -->
+        <!-- BOTTOM CONSTELLATION (shifted down +200px) -->
         <!-- ============================== -->
 
-        <!-- Figma→Python→SQL→Java, SQL→R, Figma→Java -->
-        <line x1="450"  y1="1000" x2="900"  y2="750"  class="star-line" />
-        <line x1="900"  y1="750"  x2="1350" y2="850" class="star-line" />
-        <line x1="1350" y1="850"  x2="1100" y2="1200" class="star-line" />
-        <line x1="1350" y1="850"  x2="2000" y2="700" class="star-line" />
-        <line x1="450"  y1="1000" x2="1100" y2="1200" class="star-line" />
+        <line x1="450"  y1="1200" x2="900"  y2="950"  class="star-line" />
+        <line x1="900"  y1="950"  x2="1350" y2="1050" class="star-line" />
+        <line x1="1350" y1="1050" x2="1100" y2="1400" class="star-line" />
+        <line x1="1350" y1="1050" x2="2000" y2="900"  class="star-line" />
+        <line x1="450"  y1="1200" x2="1100" y2="1400" class="star-line" />
 
         <!-- Stars -->
-        <use href="#star" x="450"  y="1000" class="twinkle delay2" />
-        <use href="#star" x="900"  y="750"  class="twinkle delay1" />
-        <use href="#star" x="1350" y="850"  class="twinkle delay4" />
-        <use href="#star" x="1100" y="1200" class="twinkle delay3" />
-        <use href="#star" x="2000" y="700"  class="twinkle delay5" />
+        <use href="#star" x="450"  y="1200" class="twinkle delay2" />
+        <use href="#star" x="900"  y="950"  class="twinkle delay1" />
+        <use href="#star" x="1350" y="1050" class="twinkle delay4" />
+        <use href="#star" x="1100" y="1400" class="twinkle delay3" />
+        <use href="#star" x="2000" y="900"  class="twinkle delay5" />
 
         <!-- Labels -->
-        <text x="420"  y="1045" class="label">Figma</text>
-        <text x="870"  y="735"  class="label">Python</text>
-        <text x="1320" y="835"  class="label">SQL</text>
-        <text x="1080" y="1245" class="label">Java</text>
-        <text x="2020" y="690"  class="label">R</text>
+        <text x="420"  y="1245" class="label">Figma</text>
+        <text x="870"  y="935"  class="label">Python</text>
+        <text x="1320" y="1035" class="label">SQL</text>
+        <text x="1080" y="1445" class="label">Java</text>
+        <text x="2020" y="890"  class="label">R</text>
 
       </svg>
     </div>
@@ -277,10 +279,8 @@
   </div>
 </section>
 
-
+<script src="script.js"></script>
 </body>
 
-
-z
 </html>
 
