@@ -81,6 +81,9 @@ body {
   max-width: 1600px;
   height: auto;
   display: block;
+  transform-origin: center;
+  will-change: transform;
+  transition: transform 0.25s ease-ou
 }
 
 .star-line {
@@ -283,6 +286,7 @@ body {
     transform 0.4s ease,
     background-color 0.4s ease,
     box-shadow 0.4s ease;
+  transform: translateY(var(--parallax-offset, 0px));
 }
 
 .project-card:hover img {
@@ -691,4 +695,18 @@ body {
   0%   { opacity: 0.6; letter-spacing: 0.08em; }
   50%  { opacity: 1;   letter-spacing: 0.12em; }
   100% { opacity: 0.6; letter-spacing: 0.08em; }
+}
+
+/* ===================================================== */
+/* SCROLL REVEAL + MICRO-ANIMATIONS                      */
+/* ===================================================== */
+.fade-title {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-title.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
