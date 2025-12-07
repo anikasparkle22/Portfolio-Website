@@ -11,6 +11,33 @@
 
 <body>
 
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-inner">
+      <p class="loading-caption">Loading...</p>
+      <svg class="gemini-constellation" viewBox="0 0 400 400" aria-hidden="true">
+        <defs>
+          <linearGradient id="twin-line-glow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#fff6d3" stop-opacity="0.95" />
+            <stop offset="100%" stop-color="#9cc6ff" stop-opacity="0.8" />
+          </linearGradient>
+        </defs>
+
+        <circle class="anchor-star castor" cx="140" cy="60" r="10" />
+        <circle class="anchor-star pollux" cx="260" cy="60" r="10" />
+
+        <path class="twin-line left-line" d="M140 60 L140 210 L120 300" />
+        <path class="twin-line right-line" d="M260 60 L260 210 L280 300" />
+        <path class="twin-line cross-line" d="M140 210 L260 210" />
+
+        <circle class="body-star left-shoulder" cx="140" cy="210" r="6" />
+        <circle class="body-star left-knee" cx="120" cy="300" r="6" />
+        <circle class="body-star right-shoulder" cx="260" cy="210" r="6" />
+        <circle class="body-star right-knee" cx="280" cy="300" r="6" />
+      </svg>
+    </div>
+  </div>
+
+
  <!-- ===================================================== -->
 <!-- HERO SECTION                                           -->
 <!-- ===================================================== -->

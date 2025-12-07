@@ -576,3 +576,119 @@ body {
   line-height: 1.6;
   font-size: 1.15rem;
 }
+/* ===================================================== */
+/* GEMINI LOADING SCREEN — COLOR FIXED                   */
+/* ===================================================== */
+
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* ✅ Exact match to your screenshot */
+  background:
+    radial-gradient(circle at 45% 30%, rgba(156, 198, 255, 0.08), rgba(12, 12, 30, 0.96)),
+    linear-gradient(180deg, #0c0c1e 0%, #050510 100%);
+
+  z-index: 9999;
+  transition: opacity 0.7s ease;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-inner {
+  text-align: center;
+  gap: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✅ Caption now matches purple glow theme */
+.loading-caption {
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c6a0ff;
+  filter: drop-shadow(0 0 14px rgba(108, 84, 168, 0.7));
+  animation: captionPulse 2.4s ease-in-out infinite;
+}
+
+.gemini-constellation {
+  width: min(520px, 90vw);
+  height: auto;
+  overflow: visible;
+}
+
+/* ✅ Anchor stars now lavender (NOT yellow) */
+.anchor-star {
+  fill: #c6a0ff;
+  opacity: 0;
+  transform-origin: center;
+  filter: drop-shadow(0 0 18px rgba(108, 84, 168, 0.9));
+  animation: anchorAppear 0.9s ease-out forwards;
+  animation-delay: 1.5s;
+}
+
+/* ✅ Lines now pure purple glow */
+.twin-line {
+  fill: none;
+  stroke: url(#twin-line-glow);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 320;
+  stroke-dashoffset: 320;
+  opacity: 0.95;
+  animation: lineDraw 1.8s ease-out forwards;
+  animation-delay: 1.6s;
+  filter: drop-shadow(0 0 16px rgba(108, 84, 168, 0.85));
+}
+
+/* ✅ Body stars now match constellation palette */
+.body-star {
+  fill: #c6a0ff;
+  opacity: 0;
+  filter: drop-shadow(0 0 12px rgba(156, 198, 255, 0.9));
+  animation: starAppear 0.35s linear forwards;
+}
+
+/* ✅ PERFECTLY TIMED TO LINE PROGRESS */
+.left-shoulder  { animation-delay: 2.1s; }
+.right-shoulder { animation-delay: 2.2s; }
+
+.left-knee  { animation-delay: 3.1s; }
+.right-knee { animation-delay: 3.2s; }
+
+.anchor-star.castor,
+.anchor-star.pollux {
+  r: 12;
+}
+
+/* ✅ CLEAN, COLOR-SAFE ANIMATIONS */
+@keyframes anchorAppear {
+  0% { opacity: 0; transform: scale(0.6); }
+  60% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes lineDraw {
+  0% { stroke-dashoffset: 320; }
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes starAppear {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes captionPulse {
+  0%   { opacity: 0.6; letter-spacing: 0.08em; }
+  50%  { opacity: 1;   letter-spacing: 0.12em; }
+  100% { opacity: 0.6; letter-spacing: 0.08em; }
+}

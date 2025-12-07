@@ -1,4 +1,22 @@
+document.addEventListener("DOMContentLoaded", () => {
+  // -----------------------------
+  // LOADING SCREEN FADE OUT
+  // -----------------------------
+  const loadingScreen = document.getElementById("loading-screen");
 
+  if (loadingScreen) {
+    setTimeout(() => {
+      loadingScreen.classList.add("fade-out");
+
+      setTimeout(() => {
+        loadingScreen.remove();
+      }, 900);
+    }, 3600);
+  }
+
+  // -----------------------------
+  // ROTATING TEXT
+  // -----------------------------
   const phrases = [
     "Software Developer",
     "Frontend Engineer",
@@ -10,7 +28,10 @@
   const textElement = document.getElementById("rotating-text");
 
   function rotateText() {
+    if (!textElement) return;
+
     textElement.style.opacity = 0;
+
     setTimeout(() => {
       index = (index + 1) % phrases.length;
       textElement.textContent = phrases[index];
@@ -19,9 +40,17 @@
   }
 
   setInterval(rotateText, 3000);
+});
 
-  function scrollProjects() {
-  document.getElementById("projectsScroll").scrollBy({
+// -----------------------------
+// PROJECT SCROLL BUTTON
+// -----------------------------
+function scrollProjects() {
+  const scrollContainer = document.getElementById("projectsScroll");
+
+  if (!scrollContainer) return;
+
+  scrollContainer.scrollBy({
     left: 420,
     behavior: "smooth"
   });
