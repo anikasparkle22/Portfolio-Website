@@ -1,5 +1,5 @@
-* {
-  margin: 0;
+
+* {  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -9,7 +9,7 @@
   --purple-mid: #6c54a8;
   --purple-light: #c6a0ff;
   --accent-blue: #9cc6ff;
-  --bg-dark: #020016;
+  --bg-dark: #0d0520;
   --card-bg: rgba(18, 10, 45, 0.75);
   --card-hover-bg: rgba(200, 180, 255, 0.18);
   --text-primary: #fff;
@@ -25,12 +25,29 @@ body {
   overflow-x: hidden;
 }
 
+/* ===================================================== */
+/* STARFIELD CANVAS — fixed behind everything            */
+/* ===================================================== */
+#starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Lift all direct section children above the canvas */
+.navbar,
+.loading-screen,
+section,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
 .bg-space {
-  background-image: url("galaxy-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: transparent;
   width: 100%;
 }
 
@@ -487,14 +504,11 @@ body {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem 1.5rem;
-  justify-items: center;
+  gap: 1.5rem;
 }
 
 .skill {
-  width: 100%;
   aspect-ratio: 1;
-  max-width: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -502,6 +516,7 @@ body {
   border-radius: 16px;
   border: 1px solid rgba(198, 160, 255, 0.08);
   transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  padding: 1rem;
 }
 
 .skill:hover {
@@ -511,20 +526,34 @@ body {
 }
 
 .skill img {
-  max-width: 72%;
-  max-height: 72%;
+  width: 65%;
+  height: 65%;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
 .skill img:hover { transform: scale(1.12); }
-.skill img.sql { max-height: 62%; }
-.skill img.js  { max-height: 68%; }
+.skill img.sql { height: 55%; }
+.skill img.js  { height: 60%; }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .skills-section { padding: 4rem 1.25rem; }
-  .skills-grid { gap: 0.9rem; }
-  .skill { border-radius: 10px; }
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+  }
+  .skill {
+    border-radius: 12px;
+    padding: 0.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  .skill { border-radius: 10px; padding: 0.5rem; }
 }
 
 /* ===================================================== */
