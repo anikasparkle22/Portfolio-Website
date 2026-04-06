@@ -1,5 +1,5 @@
-
-* {  margin: 0;
+* {
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -182,23 +182,11 @@ footer {
   min-width: 0;
 }
 
-.constellation-svg {
+.constellation-canvas {
   width: 100%;
-  max-width: 1000px;
-  height: auto;
+  max-width: 700px;
+  height: 500px;
   display: block;
-  transform-origin: center;
-  will-change: transform;
-}
-
-.star-line { stroke: rgba(255,255,255,0.6); stroke-width: 3.5; }
-
-.label {
-  fill: white;
-  font-size: 60px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  pointer-events: none;
 }
 
 @media (max-width: 900px) {
@@ -224,39 +212,15 @@ footer {
     width: 100%;
   }
 
-  .constellation-svg {
-    max-width: 340px;
-    margin: 0 auto;
+  .constellation-canvas {
+    max-width: 100%;
+    height: 320px;
   }
 }
 
-/* ===================================================== */
-/* STAR ANIMATIONS                                       */
-/* ===================================================== */
-@keyframes twinkleGlow {
-  0%   { opacity: 0.4; r: 14; filter: url(#glow-small); }
-  45%  { opacity: 1;   r: 26; filter: url(#glow-big); }
-  100% { opacity: 0.4; r: 14; filter: url(#glow-small); }
+@media (max-width: 500px) {
+  .constellation-canvas { height: 260px; }
 }
-
-.twinkle {
-  animation-name: twinkleGlow;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-.speed1 { animation-duration: 2.4s; }
-.speed2 { animation-duration: 3.1s; }
-.speed3 { animation-duration: 4.5s; }
-.speed4 { animation-duration: 5.8s; }
-.speed5 { animation-duration: 7s; }
-
-.delayA { animation-delay: 0.2s; }
-.delayB { animation-delay: 1.1s; }
-.delayC { animation-delay: 2.0s; }
-.delayD { animation-delay: 3.3s; }
-.delayE { animation-delay: 4.8s; }
 
 /* ===================================================== */
 /* ABOUT ME                                              */

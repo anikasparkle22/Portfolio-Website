@@ -29,13 +29,13 @@
         </defs>
         <circle class="anchor-star castor" cx="140" cy="60" r="10" />
         <circle class="anchor-star pollux" cx="260" cy="60" r="10" />
-        <path class="twin-line left-line" d="M140 60 L140 210 L120 300" />
+        <path class="twin-line left-line"  d="M140 60 L140 210 L120 300" />
         <path class="twin-line right-line" d="M260 60 L260 210 L280 300" />
         <path class="twin-line cross-line" d="M140 210 L260 210" />
-        <circle class="body-star left-shoulder" cx="140" cy="210" r="6" />
-        <circle class="body-star left-knee" cx="120" cy="300" r="6" />
+        <circle class="body-star left-shoulder"  cx="140" cy="210" r="6" />
+        <circle class="body-star left-knee"      cx="120" cy="300" r="6" />
         <circle class="body-star right-shoulder" cx="260" cy="210" r="6" />
-        <circle class="body-star right-knee" cx="280" cy="300" r="6" />
+        <circle class="body-star right-knee"     cx="280" cy="300" r="6" />
       </svg>
     </div>
   </div>
@@ -65,59 +65,12 @@
       </div>
 
       <div class="constellations">
-        <svg class="constellation-svg" viewBox="0 0 2600 1800">
-          <defs>
-            <circle id="star" r="23" fill="white" opacity="0.9"></circle>
-            <filter id="glow-small" x="-80%" y="-80%" width="260%" height="260%">
-              <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="white" flood-opacity="0.55" />
-            </filter>
-            <filter id="glow-big" x="-150%" y="-150%" width="400%" height="400%">
-              <feDropShadow dx="0" dy="0" stdDeviation="45" flood-color="white" flood-opacity="1" />
-            </filter>
-          </defs>
-
-          <!-- TOP CONSTELLATION -->
-          <line x1="300" y1="350" x2="800" y2="180" class="star-line" />
-          <line x1="800" y1="180" x2="1300" y2="550" class="star-line" />
-          <line x1="600" y1="750" x2="1300" y2="550" class="star-line" />
-          <line x1="1300" y1="550" x2="1900" y2="480" class="star-line" />
-
-          <use href="#star" x="300" y="350" class="twinkle speed3 delayA" />
-          <use href="#star" x="800" y="180" class="twinkle speed1 delayD" />
-          <use href="#star" x="1300" y="550" class="twinkle speed5 delayC" />
-          <use href="#star" x="1900" y="480" class="twinkle speed4 delayE" />
-          <use href="#star" x="600" y="750" class="twinkle speed2 delayB" />
-
-          <text x="250" y="330" class="label">HTML</text>
-          <text x="770" y="160" class="label">CSS</text>
-          <text x="1250" y="530" class="label">JavaScript</text>
-          <text x="1920" y="470" class="label">React</text>
-          <text x="560" y="800" class="label">PHP</text>
-
-          <!-- BOTTOM CONSTELLATION -->
-          <line x1="450" y1="1200" x2="900" y2="950" class="star-line" />
-          <line x1="900" y1="950" x2="1350" y2="1050" class="star-line" />
-          <line x1="1350" y1="1050" x2="1100" y2="1400" class="star-line" />
-          <line x1="1350" y1="1050" x2="2000" y2="900" class="star-line" />
-          <line x1="450" y1="1200" x2="1100" y2="1400" class="star-line" />
-
-          <use href="#star" x="450" y="1200" class="twinkle speed4 delayC" />
-          <use href="#star" x="900" y="950" class="twinkle speed2 delayA" />
-          <use href="#star" x="1350" y="1050" class="twinkle speed5 delayE" />
-          <use href="#star" x="1100" y="1400" class="twinkle speed3 delayD" />
-          <use href="#star" x="2000" y="900" class="twinkle speed1 delayB" />
-
-          <text x="420" y="1245" class="label">Figma</text>
-          <text x="870" y="935" class="label">Python</text>
-          <text x="1320" y="1035" class="label">SQL</text>
-          <text x="1080" y="1445" class="label">Java</text>
-          <text x="2020" y="890" class="label">R</text>
-        </svg>
+        <canvas id="constellationCanvas" class="constellation-canvas"></canvas>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT ME -->
+  <!-- ABOUT ME SECTION -->
   <section class="about-section bg-space" id="about">
     <div class="about-inner">
       <img src="Anika.png" alt="Anika" class="about-img">
@@ -135,7 +88,7 @@
     </div>
   </section>
 
-  <!-- EDUCATION -->
+  <!-- EDUCATION SECTION -->
   <section class="education-section bg-space" id="education">
     <div class="education-inner">
       <h2 class="education-title">Education</h2>
@@ -164,7 +117,7 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- PROJECTS SECTION -->
   <section class="projects-section bg-space" id="projects">
     <div class="projects-inner">
       <h2 class="projects-title">Professional Projects</h2>
@@ -297,7 +250,7 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
+  <!-- SKILLS SECTION -->
   <section class="skills-section bg-space" id="skills">
     <div class="skills-inner">
       <h2 class="skills-title">Skills</h2>
@@ -314,7 +267,7 @@
     </div>
   </section>
 
-  <!-- RESUME -->
+  <!-- RESUME SECTION -->
   <section class="resume-section bg-space" id="resume">
     <div class="resume-inner">
       <h2 class="resume-title">Resume</h2>
@@ -368,7 +321,7 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACT SECTION -->
   <section class="contact-section bg-space" id="contact">
     <div class="contact-inner">
       <p class="contact-eyebrow">06 — Contact</p>
@@ -412,7 +365,7 @@
       <a href="https://linkedin.com/in/anikatasnim" target="_blank" rel="noopener">LinkedIn</a>
       <a href="mailto:anikatasnim1132@gmail.com">Email</a>
     </div>
-    <p>&copy; 2026 Anika Tasnim. All rights reserved.</p>
+    <p>© 2025 Anika Tasnim. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
